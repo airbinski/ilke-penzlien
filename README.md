@@ -37,6 +37,23 @@ bundle install
 1. You find the Markdown files in the root of the project: `imprint.md`, `about.md`, `contact.md`
 2. Open the file in your editor, start editing Markdown! If you save your file, the changes will directly be visible in the browser after refreshing
 
+### 4. Edit projects
+
+1. You find the projects defined in the `_posts` folder. They all follow the same name standard which is `YYYY-MM-DD-<short-name>.md`. They are sorted by date, the latest project will appear on the top of the page, the earliest on the bottom
+2. In the "frontmatter" area (the one at the top of each markdown document, between the `---` symbols) you can edit: 
+    - The `title` of the project
+    - The filter categories which will be then displayed on the left of the page via `category`
+    - The `featured` image which is the one displayed first
+    - All the `images` of the project, which will be displayed when the user clicks on the project
+3. Images are placed in the `images` folder. Recommened dimensions for images: `1600px` (longest side), max. `500kb`, better less - thumbnail images: `800px` (longest side), max. `100kb`, better less.
+
+### 5. Edit meta information and navigation
+
+1. Open the `_config.yml` file in your editor
+2. Under `title` and `description` you can change the information of the website which will change how it is seen on search engines. The `description` field is also used for the introduction text on the home page
+3. You can change the `navigation` by adding, removing or updating the items in the list. The `main` navigation is the floating one in the bottom left, the `footer` navigation is the one at the bottom of the page
+4. Please note that you have to restart the server to make these changes visible in the browser! For this you need to go back to the `Terminal` app and press [Control] + [C], then run `bundle exec jekyll serve` again.
+
 ### Markdown
 
 Markdown is a formatting language which is used to write content on this website. You can see some examples below or read this [Tutorial](https://daringfireball.net/projects/markdown/basics).
