@@ -1,5 +1,7 @@
 # ilke-penzlien
 
+Static website built with [Jekyll](https://jekyllrb.com/) and hosted via [GitHub Pages](https://pages.github.com/) for [ilkepenzlien.de](https://ilkepenzlien.de).
+
 ## Requirements
 
 * Ruby `>= 2.5.0`
