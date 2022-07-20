@@ -127,7 +127,7 @@ main {
 
 .logo {
   pointer-events: initial;
-  max-width: 200px;
+  max-width: 300px;
 }
 
 .main {
@@ -454,15 +454,22 @@ body.mode-filter .grid-pinboard .grid-item {
   display: flex;
 }
 
-.gallery-image {
+.gallery-image-container {
   position: fixed;
-  top: 4em;
-  right: 2em;
-  bottom: 4em;
-  left: 2em;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.gallery-image {
+  max-width: 80%;
+  max-height: 80%;
+  pointer-events: initial;
 }
 
 .gallery-title {

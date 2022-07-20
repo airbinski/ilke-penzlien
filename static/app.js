@@ -43,9 +43,7 @@ function showGallery(title = '', images = [], startIndex = 0) {
 }
 
 function updateImage() {
-  elems['gallery-image'].style.backgroundImage = `url(${
-    state.images[state.imageIndex]
-  })`;
+  elems['gallery-image'].src = state.images[state.imageIndex];
   elems['gallery-index'].innerText = `${state.imageIndex + 1} / ${
     state.images.length
   }`;
@@ -83,8 +81,13 @@ elems['gallery-close'].addEventListener('click', (event) => {
   hideGallery();
 });
 
-elems['gallery'].addEventListener('click', () => {
+elems['gallery-image'].addEventListener('click', (event) => {
+  event.stopPropagation();
   nextImage();
+});
+
+elems['gallery'].addEventListener('click', () => {
+  hideGallery();
 });
 
 elems['gallery-next'].addEventListener('click', (event) => {
