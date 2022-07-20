@@ -11,7 +11,8 @@
     cd dev/ilke-penzlien
     bundle exec jekyll serve
     ```
-      
+3. You can open the locally served website now on http://localhost:4000 in your Browser
+
 ### Markdown
 
 Markdown is a formatting language which is used to write content on this website. You can see some examples below or read this [Tutorial](https://daringfireball.net/projects/markdown/basics).
