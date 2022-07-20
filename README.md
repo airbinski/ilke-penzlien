@@ -66,7 +66,7 @@ bundle install
 1. Go back to the `Github Desktop` app
 2. Click "Commit" on the bottom left to add your changes, you can also choose a commit message before if you want
 3. Click "Push" in the main view
-4. The changes are uploaded to GitHub now, they will be visible online in 2+ minutes
+4. The changes are uploaded to GitHub now, they will be visible online in 2+ minutes, go to https://airbinski.github.io/ilke-penzlien/ to see them!
 
 ---
 
