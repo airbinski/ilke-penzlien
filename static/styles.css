@@ -111,6 +111,12 @@ main {
   left: 0;
 }
 
+@media screen and (max-width: 1000px) {
+  .header-fixed {
+    position: static;
+  }
+}
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -120,10 +126,8 @@ main {
 }
 
 .logo {
-  display: inline-block;
-  text-transform: lowercase;
-  font-size: 40px;
   pointer-events: initial;
+  max-width: 200px;
 }
 
 .main {
@@ -198,10 +202,6 @@ main {
 
   .header + .navigation-bottom {
     margin-top: 3.5em;
-  }
-
-  .header-fixed + .navigation-bottom {
-    margin-top: 8em;
   }
 }
 
