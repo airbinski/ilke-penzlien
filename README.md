@@ -24,7 +24,7 @@ bundle install
     bundle exec jekyll serve
     ```
 3. You can open the locally served website now on http://localhost:4000 in your Browser
-4. You can later exit the server by pressing <kbd>Control</kbd> + <kbd>C</kbd>
+4. You can later exit the server by pressing <kbd>Control</kbd> + <kbd>C</kbd> in Terminal
 
 ### II. Open website in editor
 
