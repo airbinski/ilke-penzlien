@@ -14,6 +14,8 @@
       
 ### Markdown
 
+Markdown is a formatting language which is used to write content on this website. You can see some examples below or read this [Tutorial](https://daringfireball.net/projects/markdown/basics).
+
 ```markdown
 Paragraphs are just written in one line like that: Proin vel mollis elit. Sed aliquam, tellus lobortis aliquam tincidunt.
 
