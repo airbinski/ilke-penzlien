@@ -1,7 +1,7 @@
 ---
 title: Salon Kuschan
 category:
-  - Interiour
+  - Interior
 featured: 003-kuschan/kuschan-01
 images:
   - 003-kuschan/kuschan-01

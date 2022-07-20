@@ -1,7 +1,7 @@
 ---
 title: Wolfen Studio
 category:
-  - Interiour
+  - Interior
   - Furniture
   - Retail
 featured: 001-wolfen-mb/wolfen-mb-01

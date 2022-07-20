@@ -1,13 +1,13 @@
 ---
-title: Private Appartment
+title: Hegemonietempel, Private Appartment
 category:
   - Interior
-featured: 004-private-hb/private-hb-01
+featured: 012-uferstrasse/uferstrasse-01
 images:
-  - 004-private-hb/private-hb-01
-  - 004-private-hb/private-hb-02
-  - 004-private-hb/private-hb-03
-  - 004-private-hb/private-hb-04
+  - 012-uferstrasse/uferstrasse-01
+  - 012-uferstrasse/uferstrasse-02
+  - 012-uferstrasse/uferstrasse-03
+  - 012-uferstrasse/uferstrasse-04
 ---
 
 Vestibulum eget enim id tellus consequat accumsan. Curabitur non erat in lacus porttitor sagittis eu ultricies lorem. Vestibulum nec dolor a ex dapibus condimentum nec non eros. Phasellus a faucibus velit. Morbi vel neque vitae elit rutrum bibendum pretium ac ex.
