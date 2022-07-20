@@ -1,26 +1,20 @@
+{% include base.html %}
 <div class="grid grid-pinboard">
   {% for post in include.posts %}
-    {%- capture images_str -%}
-      {% for image in post.images %}
-        {{- image | prepend: "/images/" | append: ".jpg" -}}
-        {%- if forloop.last == false %}::{% endif -%}
-      {% endfor %}
-    {%- endcapture -%}
-    {% assign images = images_str | split: "::" | jsonify | replace: '"', "'" %}
     {% if post.featured %}
-      {% assign featured = post.featured | prepend: "/images/" | append: "-thumb.jpg" %}
+      {% assign featured = post.featured | prepend: "/images/" | prepend: base | append: "-thumb.jpg" %}
     {% endif %}
     {% assign categories = post.categories | jsonify | replace: '"', "'" %}
     <div class="grid-item" data-categories="{{ categories }}">
       <div class="grid-item-inner">
         <section class="preview">
           {% if featured %}
-            <a class="no-hover" href="{{ post.url }}">
+            <a class="no-hover" href="{{ base }}{{ post.url }}">
               <img class="preview-featured-image" src="{{ featured }}">
             </a>
           {% endif %}
           <div class="preview-info">
-            <a href="{{ post.url }}">{{ post.title}}</a>
+            <a href="{{ base }}{{ post.url }}">{{ post.title}}</a>
           </div>
         </section>
       </div>
