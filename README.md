@@ -1,5 +1,17 @@
 # ilke-penzlien
 
+## Requirements
+
+* Ruby `>= 2.5.0`
+* Bundler Gem
+
+## Setup
+
+```bash
+# Install dependencies of this project
+bundle install
+```
+
 ## Usage
 
 ### Start server for local development
