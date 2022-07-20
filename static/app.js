@@ -43,6 +43,7 @@ function showGallery(title = '', images = [], startIndex = 0) {
 }
 
 function updateImage() {
+  elems['gallery-image'].src = '';
   elems['gallery-image'].src = state.images[state.imageIndex];
   elems['gallery-index'].innerText = `${state.imageIndex + 1} / ${
     state.images.length
