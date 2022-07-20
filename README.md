@@ -14,7 +14,7 @@ bundle install
 
 ## Usage
 
-### Start server for local development
+### 1. Start server for local development
 
 1. Open the `Terminal` app
 2. Run the following commands in the terminal
@@ -24,6 +24,18 @@ bundle install
     bundle exec jekyll serve
     ```
 3. You can open the locally served website now on http://localhost:4000 in your Browser
+
+### 2. Open website in editor
+
+1. Open the `Github Desktop` app
+2. Click "Fetch Origin" to maybe get the latest website update
+3. Click "Open in Sublime" to open the website code in your editor
+4. Now you're ready to edit the website!
+
+### 3. Edit static pages, like "About", "Imprint", etc.
+
+1. You find the Markdown files in the root of the project: `imprint.md`, `about.md`, `contact.md`
+2. Open the file in your editor, start editing Markdown! If you save your file, the changes will directly be visible in the browser after refreshing
 
 ### Markdown
 
