@@ -16,6 +16,6 @@ layout: default
   {% endfor %}
 </ul>
 <p class="introduction">
-  Furniture and interior design from Berlin. 20th century design research and consulting.
+  {{ site.description }}
 </p>
 {% include projects.html posts=site.posts %}
