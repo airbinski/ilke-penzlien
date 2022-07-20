@@ -1,0 +1,9 @@
+<nav class="navigation navigation-bottom">
+  <ul>
+    {% for item in site.navigation.main %}
+      <li class="navigation-item">
+        {% include link.html url=item.url label=item.label %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

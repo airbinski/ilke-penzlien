@@ -1,0 +1,497 @@
+:root {
+  --color-main: black;
+  --color-background: white;
+  --font-family: Karla, Arial, sans-serif;
+  --font-size: 18px;
+  --font-size-small: 16px;
+  --line-height: 1.5;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  min-width: 300px;
+}
+
+body {
+  color: var(--color-main);
+  background-color: var(--color-background);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  text-transform: lowercase;
+  font-weight: 400;
+}
+
+p {
+  line-height: var(--line-height);
+}
+
+strong {
+  font-weight: 700;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: var(--color-main);
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid var(--color-main);
+}
+
+.no-hover:hover {
+  border-bottom: 0;
+}
+
+button {
+  padding: 1em;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  cursor: pointer;
+}
+
+button:hover span {
+  border-bottom: 1px solid var(--color-main);
+}
+
+header,
+main,
+footer {
+  margin: 1em;
+}
+
+main {
+  flex: 1;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/*
+ * Global
+ * */
+
+.header {
+  margin-top: 2em;
+  text-align: center;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.header-fixed {
+  position: fixed;
+  top: 1em;
+  right: 0;
+  left: 0;
+}
+
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  display: inline-block;
+  text-transform: lowercase;
+  font-size: 40px;
+  pointer-events: initial;
+}
+
+.main {
+  margin-top: 1em;
+}
+
+/*
+ * Introduction
+ * */
+
+.introduction {
+  margin: 0 auto;
+  margin-top: 8em;
+  max-width: 30em;
+  text-align: center;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height);
+}
+
+@media screen and (max-width: 1000px) {
+  .introduction {
+    margin-top: 3em;
+  }
+}
+
+/*
+ * Page
+ * */
+
+.page {
+  margin: 0 auto;
+  margin-top: 6em;
+  max-width: 40em;
+  font-size: var(--font-size-small);
+}
+
+/*
+ * Fixed Navigation
+ * */
+
+.navigation {
+  position: fixed;
+  left: 0;
+  margin: 2em;
+  margin-top: 6em;
+  z-index: 1200;
+}
+
+.navigation-top {
+  top: 0;
+}
+
+.navigation-bottom {
+  bottom: 0;
+}
+
+.navigation-item {
+  margin-top: 0.5em;
+  text-transform: lowercase;
+}
+
+@media screen and (max-width: 1000px) {
+  .navigation-top {
+    display: none;
+  }
+
+  .navigation-bottom {
+    margin-top: 8em;
+    position: static;
+    text-align: center;
+  }
+
+  .header + .navigation-bottom {
+    margin-top: 3.5em;
+  }
+
+  .header-fixed + .navigation-bottom {
+    margin-top: 8em;
+  }
+}
+
+/*
+ * Footer Navigation
+ * */
+
+.footer-navigation {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.footer-navigation-item {
+  display: inline-block;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  text-transform: lowercase;
+}
+
+/*
+ * Filter
+ * */
+
+.filter-item-link:hover {
+  border-bottom: 0;
+}
+
+.filter-item-link-active {
+  border-bottom: 1px solid var(--color-main) !important;
+}
+
+/*
+ * Grid
+ * */
+
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 4em auto;
+  max-width: 1150px;
+}
+
+.grid-item {
+  display: flex;
+  flex-basis: 50%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.grid-item img {
+  width: 100%;
+  max-width: 900px;
+  max-height: 900px;
+}
+
+.grid-item-inner {
+  margin: 1em;
+}
+
+/*
+/* "Dynamic" grid "Pinboard" style */
+/* *
+
+/* Variation of space between grid items */
+
+.grid-pinboard .grid-item:nth-child(odd) > .grid-item-inner {
+  margin: 1em;
+}
+
+.grid-pinboard .grid-item:nth-child(2n + 1) > .grid-item-inner {
+  margin-left: 2em;
+}
+
+/* Variation of content position inside of grid items */
+
+.grid-pinboard .grid-item:nth-child(odd) {
+  justify-content: flex-end;
+}
+
+.grid-pinboard .grid-item:nth-child(3n) {
+  align-items: center;
+}
+
+.grid-pinboard .grid-item:nth-child(3n - 3) {
+  align-items: flex-end;
+}
+
+.grid-pinboard .grid-item:nth-child(5n) {
+  align-items: center;
+}
+
+/* One-column layout with item on the right where next element on the left
+ * moves a little bit up.
+ *
+ *        -----
+ *        |   | <- Large item on the right
+ *  ___   |   |
+ *  | |   -----
+ *  ... <-- Moves up a little
+ * */
+
+.grid-pinboard .grid-item:nth-child(5n - 2) {
+  flex-basis: 100%;
+  justify-content: flex-end;
+}
+
+.grid-pinboard .grid-item:nth-child(5n - 2) img {
+  max-width: 450px; /* Restrict width to prevent overlap with next item */
+}
+
+.grid-pinboard .grid-item:nth-child(5n - 1) {
+  position: relative;
+  top: -10em;
+}
+
+body.mode-filter .grid-pinboard .grid-item {
+  top: 0; /* Disable moving items up when filter is active */
+}
+
+/* One more one-column layout .. */
+
+.grid-pinboard .grid-item:nth-child(6n) {
+  flex-basis: 100%;
+  max-width: auto;
+}
+
+/* Variations of padding around grid item */
+
+.grid-pinboard .grid-item:nth-child(8n) > .grid-item-inner {
+  padding-top: 4em;
+}
+
+.grid-pinboard .grid-item:nth-child(3n) > .grid-item-inner {
+  padding-top: 3em;
+}
+
+.grid-pinboard .grid-item:nth-child(2) > .grid-item-inner {
+  padding-top: 8em;
+}
+
+.grid-pinboard .grid-item:nth-child(2n + 4) > .grid-item-inner {
+  padding-right: 1em;
+}
+
+.grid-pinboard .grid-item:nth-child(8n - 1) > .grid-item-inner {
+  padding-right: 1em;
+}
+
+.grid-pinboard .grid-item:nth-child(3n - 2) > .grid-item-inner {
+  padding-left: 4em;
+}
+
+/*
+/* Simple grid style where all items have the same height */
+/* */
+
+.grid-same-size {
+  justify-content: flex-start;
+}
+
+.grid-same-size .grid-item:nth-child(even) {
+  justify-content: flex-start;
+}
+
+.grid-same-size .grid-item:nth-child(odd) {
+  justify-content: flex-end;
+}
+
+.grid-same-size .grid-item img {
+  width: 100%;
+  max-height: 400px;
+}
+
+@media screen and (max-width: 1400px) {
+  .grid {
+    margin-right: 2em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .grid {
+    justify-content: center;
+  }
+
+  .grid-item {
+    flex-basis: 100%;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+    top: 0 !important;
+  }
+
+  .grid-item-inner {
+    padding: 0 !important;
+    margin: 1em !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .grid {
+    margin-top: 3em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .grid-item-inner {
+    padding: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/*
+ * Preview
+ * */
+
+.preview-info {
+  font-size: var(--font-size-small);
+  opacity: 0;
+}
+
+.preview:hover .preview-info {
+  opacity: 1;
+}
+
+/*
+ * Gallery
+ * */
+
+.gallery {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background-color: var(--color-background);
+  overflow: hidden;
+  display: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-small);
+}
+
+.gallery-active {
+  display: flex;
+}
+
+.gallery-image {
+  position: fixed;
+  top: 4em;
+  right: 2em;
+  bottom: 4em;
+  left: 2em;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery-title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 50%;
+  margin: 1em;
+}
+
+.gallery-index {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 1em;
+}
+
+.gallery-bar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.gallery-bar-top {
+  top: 0;
+}
+
+.gallery-bar-bottom {
+  bottom: 0;
+}

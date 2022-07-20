@@ -1,0 +1,42 @@
+# Configurable meta information about website
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+title: Ilke Penzlien
+description: >-
+  Furniture and interior design from Berlin. 20th century design research and
+  consulting
+navigation:
+  main:
+    - label: About
+      url: /about
+    - label: Contact
+      url: /contact
+    - label: Instagram
+      url: https://instagram.com/ilkepenzlien
+  footer:
+    - label: Contact
+      url: /contact
+    - label: Imprint
+      url: /imprint
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Simplify permalinks, remove dates from post urls
+permalink: /:categories/:title
+
+# Use `posts` template for project posts, `default` for the index page and
+# `pages` for all other (static) pages
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "posts"
+  - scope:
+      path: "index"
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "pages"

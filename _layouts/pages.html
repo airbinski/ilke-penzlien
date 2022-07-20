@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<header class="header">
+  {% include logo.html %}
+</header>
+{% include navigation.html %}
+<article class="page">
+  {% if page.title %}
+    <h2>{{ page.title }}</h2>
+  {% endif %}
+  {{ content }}
+</article>

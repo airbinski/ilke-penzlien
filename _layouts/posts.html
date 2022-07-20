@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<header class="header">
+  {% include logo.html %}
+</header>
+{% include navigation.html %}
+<article class="page">
+  {% if page.title %}
+    <h2>{{ page.title }}</h2>
+  {% endif %}
+  {{ content }}
+</article>
+{% if page.images %}
+  {%- capture images_str -%}
+    {% for image in page.images %}
+      {{- image | prepend: "/images/" | append: ".jpg" -}}
+      {%- if forloop.last == false %}::{% endif -%}
+    {% endfor %}
+  {%- endcapture -%}
+  {% assign images = images_str | split: "::" | jsonify | replace: '"', "'" %}
+  <div class="grid grid-same-size">
+    {% for image in page.images %}
+      <div class="grid-item">
+        <div class="grid-item-inner">
+          {% assign index = forloop.index0 %}
+          <a class="no-hover" href="#" data-gallery="{{ images }}" data-gallery-index="{{ index}}" data-gallery-title="{{ page.title }}">
+            <img src="{{ image | prepend: "/images/" | append: "-thumb.jpg" }}">
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
