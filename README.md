@@ -22,8 +22,12 @@ bundle install
 2. Run the following commands in the terminal
 
     ```bash
+    # Go into the right folder
     cd dev/ilke-penzlien
-    bundle exec jekyll serve
+
+    # Start the server for local development, set --host, to allow access to the server
+    # from other devices (smartphone etc.)
+    bundle exec jekyll serve --host 0.0.0.0
     ```
 3. You can open the locally served website now on http://localhost:4000 in your Browser
 4. You can later exit the server by pressing <kbd>Control</kbd> + <kbd>C</kbd> in Terminal
