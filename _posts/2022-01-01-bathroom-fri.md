@@ -1,13 +1,12 @@
 ---
-title: Felicious Jewelery
+title: Bathroom, Private Appartment
 category:
   - Interior
-  - Retail
-featured: 013-felicious/felicious-01
+featured: 015-bathroom-fri/bathroom-fri-01
 images:
-  - 013-felicious/felicious-01
-  - 013-felicious/felicious-02
-  - 013-felicious/felicious-03
+  - 015-bathroom-fri/bathroom-fri-01
+  - 015-bathroom-fri/bathroom-fri-02
+  - 015-bathroom-fri/bathroom-fri-03
 ---
 
 Vestibulum eget enim id tellus consequat accumsan. Curabitur non erat in lacus porttitor sagittis eu ultricies lorem. Vestibulum nec dolor a ex dapibus condimentum nec non eros. Phasellus a faucibus velit. Morbi vel neque vitae elit rutrum bibendum pretium ac ex.
