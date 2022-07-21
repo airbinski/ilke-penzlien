@@ -1,5 +1,5 @@
 ---
-title: Institut für künstlerische Forschung, Berlin
+title: Beyond Walls, Exhibition Design
 category:
   - Exhibitions
 featured: 017-beyond-walls/beyond-walls-01
